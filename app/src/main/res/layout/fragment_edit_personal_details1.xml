@@ -1,0 +1,222 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="10dp"
+    android:id="@+id/rel"
+    android:layout_marginRight="10dp"
+    android:layout_height="match_parent"
+    >
+
+    <!--<ImageButton-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/Image"-->
+    <!--android:src="@drawable/user"-->
+    <!--android:adjustViewBounds="true"-->
+
+    <!--android:scaleType="fitCenter"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true" />-->
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/Image"
+        android:src="@drawable/user"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"  />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:id="@+id/editname"
+        android:singleLine="true"
+        android:layout_marginTop="35dp"
+
+
+
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/Image"
+        android:layout_toEndOf="@+id/Image" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editlastname"
+        android:hint="Last Name"
+        android:singleLine="true"
+        android:layout_below="@+id/editname"
+        android:layout_toRightOf="@+id/Image"
+        android:layout_toEndOf="@+id/Image" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:id="@+id/editaddress"
+        android:lines="3"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="false"
+        android:hint="Address"
+        android:layout_below="@+id/Image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Gender"
+        android:id="@+id/textView"
+        android:layout_below="@+id/editlandmark"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Wgender"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Male"
+            android:id="@+id/Wmale"
+            android:layout_above="@+id/Wfemale"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:id="@+id/Wfemale"
+            android:layout_above="@+id/Wtype"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+    </RadioGroup>
+
+
+    <!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+
+    <!--android:text="Scan Adhar Card "-->
+    <!--android:textColor="#FFFFFF"-->
+
+    <!--android:background="@drawable/rounded_edittext"-->
+    <!--android:id="@+id/Wadharcardno"-->
+    <!--android:layout_below="@+id/Wtype"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_alignParentEnd="true" />-->
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Submit"-->
+        <!--android:textColor="#FFFFFF"-->
+
+        <!--android:background="@drawable/rounded_edittext"-->
+        <!--android:id="@+id/Wsubmit"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:hint="EmailId"
+
+        android:id="@+id/editemail"
+        android:layout_below="@+id/editaddress"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:hint="Mobile Number"
+        android:id="@+id/editno"
+        android:layout_below="@+id/editemail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editpolicestation"
+        android:layout_below="@+id/editno"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editlandmark"
+        android:hint="Landmark"
+        android:layout_below="@+id/editpolicestation"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Update"
+
+        android:textColor="#FFFFFF"
+
+        android:background="@drawable/rounded_edittext"
+        android:id="@+id/editupdate"
+        android:layout_below="@+id/Wgender"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:text="Edit"
+
+    android:textColor="#FFFFFF"
+
+    android:background="@drawable/rounded_edittext"
+    android:id="@+id/edit"
+    android:layout_gravity="right"
+        android:layout_below="@+id/Wgender"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <!--<EditText-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/EditTextAdharcardno"-->
+    <!--android:hint="Adhar Card Number"-->
+    <!--android:layout_below="@+id/Wtype"-->
+    <!--android:layout_toLeftOf="@+id/Wadharcardno"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_above="@+id/Wsubmit" />-->
+
+
+</RelativeLayout>

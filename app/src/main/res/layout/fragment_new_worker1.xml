@@ -1,0 +1,165 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+<!--            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/share"
+                android:layout_below="@+id/Wtype"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="38dp"
+                android:id="@+id/circleView"
+                />-->
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/WorkerImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user" />
+
+            <EditText
+                android:id="@+id/Wname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+
+
+                android:layout_toEndOf="@+id/WorkerImage"
+                android:layout_toRightOf="@+id/WorkerImage"
+                android:hint="Name"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/Wlastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Wname"
+                android:layout_toEndOf="@+id/WorkerImage"
+                android:layout_toRightOf="@+id/WorkerImage"
+                android:hint="Last Name"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/Waddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/WorkerImage"
+                android:gravity="top|left"
+                android:hint="Address"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:scrollHorizontally="false"
+                android:singleLine="false" />
+
+            <EditText
+                android:id="@+id/Wage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/Waddress"
+                android:hint="Age"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/Wage"
+                android:text="Gender"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RadioGroup
+                android:id="@+id/Wgender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView">
+
+
+                <RadioButton
+                    android:id="@+id/Wmale"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/Wfemale"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/Wfemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/Wtype"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="Female" />
+
+
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/Wtype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/Wgender" />
+
+
+
+
+            <Button
+                android:id="@+id/Wsubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/rounded_edittext"
+                android:text="Submit"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/EditTextAdharcardno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/Wsubmit"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="Adhar Card Number"
+                android:inputType="number" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
